@@ -1,6 +1,10 @@
-const {Router} =require("express");
-const { deleteBook } = require("../booksControllers");
-
+const {Router} = require("express");
+const auth = require("../middlewares/books.auth");
+const {
+    getBooks,
+    deleteBook,
+    deleteBookByFind,
+} = require("../controllers/booksController");
 const {getBooks} = require("../controllers/bookController")
 
 

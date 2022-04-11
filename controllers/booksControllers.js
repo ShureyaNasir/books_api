@@ -9,14 +9,12 @@ const getBooks = (req, res)=>{
 
 //delete a book
 const deleteBook =(req, res)=>{
-    const foundBook = await Books.findByTitle(req.params.title)
-if (foundBook){
-    foundBook.remove()
-    res.json({msg:"book removed"})
-} else{
-    res.status(404).json({error:"Book not found"})
+    
+
+    res.json(books.filter((book)=>book.title=req.params.title))
+    
 }
-}
+module.exports={getBooks, deleteBook}
 
 
 

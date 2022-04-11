@@ -1,4 +1,5 @@
-const express =require("express")
+const express =require("express");
+const logger =require("./middleware/books.logger");
 const booksRoute = require("./")
 
 const app = express()
